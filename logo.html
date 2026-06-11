@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Argentex — Logo options</title>
+<style>
+  :root{
+    --paper:#F8F6F1; --paper-deep:#F1EDE4; --ink:#1C1B19;
+    --oxblood:#6E2329; --oxblood-lt:#9B4A4F; --stone:#6B655C; --rule:#D8D2C6;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65;}
+  .page{max-width:1100px;margin:0 auto;padding:3rem 2rem 5rem;}
+  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;color:var(--oxblood);margin:0 0 .75rem;}
+  h1{font-size:2.25rem;line-height:1.15;margin:0 0 .5rem;}
+  h2{font-size:1.25rem;margin:0 0 .25rem;}
+  .lede{max-width:680px;color:var(--ink);}
+  .sub{font-family:var(--sans);font-size:.95rem;color:var(--stone);max-width:680px;}
+  hr{border:0;border-top:1px solid var(--rule);margin:2.5rem 0;}
+
+  .opt{margin:0 0 1rem;}
+  .opt-head{display:flex;gap:1rem;align-items:baseline;margin-bottom:1.25rem;}
+  .num{font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--oxblood);font-size:.9rem;}
+
+  .swatches{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+  @media(max-width:720px){.swatches{grid-template-columns:1fr;}}
+  .frame{border:1px solid var(--rule);padding:2.5rem 2rem;display:flex;align-items:center;justify-content:center;min-height:170px;}
+  .frame.paper{background:var(--paper);}
+  .frame.deep{background:var(--paper-deep);}
+  .frame.ink{background:var(--ink);}
+  .frame img{max-width:100%;height:auto;}
+  .cap{font-family:var(--sans);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stone);margin:.5rem 0 0;}
+
+  /* size demo row */
+  .sizes{display:flex;align-items:flex-end;gap:2.5rem;flex-wrap:wrap;border:1px solid var(--rule);padding:2rem;background:var(--paper);}
+  .sizes .s1{height:24px;} .sizes .s2{height:40px;} .sizes .s3{height:64px;}
+  .note{font-family:var(--sans);font-size:.9rem;color:var(--stone);max-width:680px;}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85em;background:var(--paper-deep);padding:.1em .35em;}
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="eyebrow">Argentex (Pty) Ltd</p>
+  <h1>Logo options</h1>
+  <p class="lede">Three type-led directions, all built from the design system: Georgia, ink on paper, a single oxblood hairline. No decorative iconography. The smart thread is <strong>Ag</strong>, the chemical symbol for silver, from <em>argentum</em>, the root of the name Argentex.</p>
+
+  <hr/>
+
+  <!-- OPTION 1 -->
+  <div class="opt">
+    <div class="opt-head"><span class="num">Option 1</span><h2>The wordmark</h2></div>
+    <p class="note">The design system's official mark: ARGENTEX in letter-spaced Georgia caps over a 1px oxblood rule. Use this as the primary logo in the header, on documents and in the footer.</p>
+    <div class="swatches" style="margin-top:1.25rem;">
+      <div><div class="frame paper"><img src="assets/logo-wordmark.svg" alt="Argentex wordmark on paper" style="width:360px;"/></div><p class="cap">On paper</p></div>
+      <div><div class="frame ink"><img src="assets/logo-wordmark.svg" alt="Argentex wordmark on ink" style="width:360px;filter:invert(1) hue-rotate(180deg);"/></div><p class="cap">Reversed (note)</p></div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- OPTION 2 -->
+  <div class="opt">
+    <div class="opt-head"><span class="num">Option 2</span><h2>The Ag mark</h2></div>
+    <p class="note">A compact monogram for favicons, avatars, the email signature stamp, and anywhere the full wordmark is too small. Ag in Georgia inside a 1px square, with an oxblood rule and a quiet sans caption tying it to silver and atomic number 47.</p>
+    <div class="swatches" style="margin-top:1.25rem;">
+      <div><div class="frame paper"><img src="assets/logo-ag-mark.svg" alt="Ag mark on paper" style="width:150px;"/></div><p class="cap">On paper</p></div>
+      <div><div class="frame deep"><img src="assets/logo-ag-mark.svg" alt="Ag mark on paper deep" style="width:150px;"/></div><p class="cap">On paper-deep</p></div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- OPTION 3 -->
+  <div class="opt">
+    <div class="opt-head"><span class="num">Option 3</span><h2>The lockup</h2></div>
+    <p class="note">Mark and wordmark together, divided by a hairline, with a sans descriptor. Use on a cover page, a letterhead, or a deck title slide where you want the full identity to introduce itself once.</p>
+    <div class="swatches" style="margin-top:1.25rem;">
+      <div><div class="frame paper"><img src="assets/logo-lockup.svg" alt="Argentex lockup on paper" style="width:460px;"/></div><p class="cap">On paper</p></div>
+      <div><div class="frame deep"><img src="assets/logo-lockup.svg" alt="Argentex lockup on paper deep" style="width:460px;"/></div><p class="cap">On paper-deep</p></div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2 style="margin-bottom:1rem;">The Ag mark at working sizes</h2>
+  <div class="sizes">
+    <img class="s1" src="assets/logo-ag-mark.svg" alt="small"/>
+    <img class="s2" src="assets/logo-ag-mark.svg" alt="medium"/>
+    <img class="s3" src="assets/logo-ag-mark.svg" alt="large"/>
+  </div>
+  <p class="note" style="margin-top:1rem;">Files are vector SVG, so they stay crisp at any size and print sharp. Located in <code>assets/</code>. For print or third-party use, convert the Georgia text to outlines so it renders identically on machines without the font.</p>
+</div>
+</body>
+</html>

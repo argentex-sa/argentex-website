@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Argentex — Silver recovery for South Africa's end-of-life solar panels</title>
+<meta name="description" content="Argentex is South Africa's first specialist silver recovery operation for end-of-life solar panels. We recover precious metals from solar panel back-sheets and silver-bearing e-waste, refine the silver to investment-grade purity, and return it to the South African economy as bullion." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F8F6F1'/%3E%3Crect x='6' y='6' width='88' height='88' fill='none' stroke='%231C1B19' stroke-width='3'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Georgia,serif' font-size='50' font-weight='700' fill='%231C1B19'%3EAg%3C/text%3E%3Crect x='34' y='78' width='32' height='3' fill='%236E2329'/%3E%3C/svg%3E" />
+
+<style>
+  :root {
+    --paper:      #F8F6F1;
+    --paper-deep: #F1EDE4;
+    --ink:        #1C1B19;
+    --oxblood:    #6E2329;
+    --oxblood-lt: #9B4A4F;
+    --stone:      #6B655C;
+    --rule:       #D8D2C6;
+
+    --serif: Georgia, "Times New Roman", serif;
+    --sans:  -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --page-max:  1100px;
+    --prose-max: 720px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--oxblood); color: var(--paper); }
+
+  :focus-visible {
+    outline: 2px solid var(--oxblood);
+    outline-offset: 3px;
+  }
+
+  img { display: block; max-width: 100%; }
+
+  /* ---------- Type ---------- */
+
+  .eyebrow {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--oxblood);
+    margin: 0 0 1rem;
+  }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 700; margin: 0; }
+  h2 { font-size: 1.625rem; line-height: 1.2; }
+  h3 { font-size: 1.25rem; line-height: 1.3; }
+
+  p { margin: 0 0 1.25rem; }
+
+  a { color: inherit; }
+
+  /* ---------- Layout ---------- */
+
+  .page { max-width: var(--page-max); margin: 0 auto; padding: 0 2rem; }
+
+  .prose-col { max-width: var(--prose-max); text-align: justify; hyphens: auto; }
+  @media (max-width: 640px) { .prose-col { text-align: left; hyphens: manual; } }
+
+  section { padding: 5.5rem 0; }
+  @media (max-width: 640px) { section { padding: 3rem 0; } }
+
+  .hairline { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+  .page > .hairline { max-width: var(--page-max); }
+
+  /* ---------- Header ---------- */
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(248, 246, 241, 0.92);
+    backdrop-filter: saturate(180%) blur(6px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .header-inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
+  .brand-mark { display: block; width: 34px; height: 34px; flex: 0 0 auto; }
+
+  .wordmark {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--oxblood);
+  }
+
+  nav.site-nav { font-family: var(--sans); font-size: 0.9rem; }
+  nav.site-nav ul {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+  }
+  nav.site-nav a {
+    color: var(--stone);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.18s ease, border-color 0.18s ease;
+  }
+  nav.site-nav a:hover { color: var(--oxblood); border-color: var(--oxblood); }
+  @media (max-width: 760px) { nav.site-nav { display: none; } }
+
+  /* ---------- Hero ---------- */
+
+  .hero { padding-top: 4.5rem; padding-bottom: 0; }
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    max-width: 16ch;
+    margin: 0 0 1.5rem;
+  }
+  .hero .sub { max-width: var(--prose-max); color: var(--ink); }
+  @media (max-width: 640px) { .hero h1 { font-size: 2.1rem; } }
+
+  /* Hero image: warm monochrome treatment of solar / metal */
+  .hero-figure { margin: 3rem 0 0; }
+  .media {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.04) brightness(0.96) sepia(0.18);
+    mix-blend-mode: luminosity;
+    opacity: 0.92;
+  }
+  /* Oxblood/ink duotone wash to pull the photography onto the palette */
+  .media::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(28,27,25,0.10), rgba(110,35,41,0.22));
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  .hero-figure .media { aspect-ratio: 21 / 9; }
+  @media (max-width: 640px) { .hero-figure .media { aspect-ratio: 4 / 3; } }
+
+  figure { margin: 0; }
+  figcaption {
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    color: var(--stone);
+    margin-top: 0.65rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- CTA ---------- */
+
+  .cta {
+    display: inline-block;
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    padding: 0.85rem 1.6rem;
+    background: transparent;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .cta:hover { background: var(--ink); color: var(--paper); }
+  .cta.on-ink { color: var(--paper); border-color: var(--paper); }
+  .cta.on-ink:hover { background: var(--paper); color: var(--ink); }
+
+  /* ---------- Numbered sections ---------- */
+
+  .section-head { display: flex; gap: 1rem; align-items: baseline; margin-bottom: 1.75rem; }
+  .numeral {
+    font-family: var(--sans);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--oxblood);
+    font-size: 0.95rem;
+    flex: 0 0 auto;
+    padding-top: 0.15rem;
+  }
+
+  /* Two-column: text + image, used sparingly */
+  .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: start; }
+  .split.reverse { grid-template-columns: 0.85fr 1.15fr; }
+  .split.reverse .split-text { order: 2; }
+  .split.reverse .split-media { order: 1; }
+  .split-media .media { aspect-ratio: 4 / 5; }
+  @media (max-width: 820px) {
+    .split, .split.reverse { grid-template-columns: 1fr; gap: 2rem; }
+    .split.reverse .split-text { order: 1; }
+    .split.reverse .split-media { order: 2; }
+    .split-media .media { aspect-ratio: 16 / 10; }
+  }
+
+  /* ---------- Reversed feature block ---------- */
+
+  .reversed { background: var(--ink); color: var(--paper); }
+  .reversed .eyebrow { color: var(--oxblood-lt); }
+  .reversed-mark { width: 56px; height: 56px; margin: 0 0 1.75rem; }
+  .reversed .lede {
+    font-size: 1.75rem;
+    line-height: 1.35;
+    max-width: 24ch;
+    margin: 0;
+  }
+  @media (max-width: 640px) { .reversed .lede { font-size: 1.35rem; } }
+
+  /* ---------- Company / team ---------- */
+
+  .team { list-style: none; margin: 1.5rem 0 0; padding: 0; max-width: var(--prose-max); }
+  .team li {
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    align-items: baseline;
+  }
+  .team li:last-child { border-bottom: 1px solid var(--rule); }
+  .team .name { font-weight: 700; }
+  .team .role {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--oxblood);
+  }
+  .team .desc { color: var(--stone); width: 100%; font-family: var(--sans); font-size: 0.95rem; }
+
+  /* ---------- Contact ---------- */
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  @media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .contact-line { font-family: var(--sans); font-size: 1rem; margin: 0 0 0.5rem; }
+  .contact-line .label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    color: var(--stone);
+    margin-bottom: 0.15rem;
+  }
+  .ink-link {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--oxblood);
+    transition: color 0.18s ease;
+  }
+  .ink-link:hover { color: var(--oxblood); }
+  .todo {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+    border: 1px solid var(--rule);
+    padding: 0.1rem 0.45rem;
+    display: inline-block;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer { border-top: 1px solid var(--rule); padding: 2.5rem 0 3.5rem; }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    align-items: baseline;
+    justify-content: space-between;
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    color: var(--stone);
+  }
+  .footer-brand { display: flex; align-items: center; gap: 0.55rem; }
+  .footer-brand .brand-mark { width: 28px; height: 28px; }
+  .footer-wordmark {
+    font-family: var(--serif);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  .skip-link {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--ink); color: var(--paper);
+    padding: 0.6rem 1rem; font-family: var(--sans); font-size: 0.85rem; z-index: 100;
+  }
+  .skip-link:focus { left: 1rem; top: 1rem; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Argentex home">
+      <img class="brand-mark" src="assets/logo-ag-mark-compact.svg" alt="" width="34" height="34" />
+      <span class="wordmark">Argentex</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#opportunity">Opportunity</a></li>
+        <li><a href="#what-we-do">What we do</a></li>
+        <li><a href="#process">Recyclers</a></li>
+        <li><a href="#responsibility">Responsibility</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="page">
+      <p class="eyebrow">Argentex (Pty) Ltd</p>
+      <h1 id="hero-title">Silver recovery for South Africa's end-of-life solar panels.</h1>
+      <p class="sub prose-col">We recover precious metals from solar panel back-sheets and silver-bearing e-waste, refine the silver to investment-grade purity, and return it to the South African economy as bullion.</p>
+      <p style="margin-top:2rem;"><a class="cta" href="#contact">Get in touch</a></p>
+
+      <figure class="hero-figure reveal">
+        <div class="media">
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=80"
+            alt="Rows of solar panels under an open sky."
+            loading="eager" width="2000" height="857" />
+        </div>
+        <figcaption>Solar capacity built through the energy-supply crisis is now reaching the end of its working life.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="page"><hr class="hairline" /></div>
+
+  <!-- I. OPPORTUNITY -->
+  <section id="opportunity" aria-labelledby="opportunity-title">
+    <div class="page">
+      <div class="split">
+        <div class="split-text">
+          <div class="section-head">
+            <span class="numeral">I</span>
+            <div>
+              <p class="eyebrow">The opportunity</p>
+              <h2 id="opportunity-title">A value stream leaving the country</h2>
+            </div>
+          </div>
+          <div class="prose-col reveal">
+            <p>South Africa installed an estimated 11 gigawatts of solar capacity through the energy-supply crisis of recent years. Those panels carry a finite life. As they reach the end of it, the glass, the aluminium frames and the junction boxes are already recovered by the country's licensed recyclers.</p>
+            <p>The back-sheet, which holds the silver, is not. Today it is stockpiled, sent to landfill, or exported for processing abroad. The material, and its value, leaves the country. Argentex exists to close that gap at home.</p>
+          </div>
+        </div>
+        <div class="split-media reveal">
+          <figure>
+            <div class="media">
+              <img
+                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1100&q=80"
+                alt="Close detail of a photovoltaic panel surface and cell grid."
+                loading="lazy" width="1100" height="1375" />
+            </div>
+            <figcaption>The silver sits in the back-sheet, the one layer the local market does not yet recover.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="page"><hr class="hairline" /></div>
+
+  <!-- II. WHAT WE DO -->
+  <section id="what-we-do" aria-labelledby="what-title">
+    <div class="page">
+      <div class="split reverse">
+        <div class="split-text">
+          <div class="section-head">
+            <span class="numeral">II</span>
+            <div>
+              <p class="eyebrow">What we do</p>
+              <h2 id="what-title">Controlled recovery, investment-grade metal</h2>
+            </div>
+          </div>
+          <div class="prose-col reveal">
+            <p>We take back-sheet material and silver-bearing e-waste from licensed recyclers and recover the silver through a controlled refining process. The recovered metal is refined to .9999 purity and sold into the bullion market.</p>
+            <p>We carry the processing, the equipment and the operational risk, so our supply partners turn a stockpiled waste stream into recurring value without carrying any of the cost.</p>
+          </div>
+        </div>
+        <div class="split-media reveal">
+          <figure>
+            <div class="media">
+              <img
+                src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1100&q=80"
+                alt="Refined silver bullion bars stacked together."
+                loading="lazy" width="1100" height="1375" />
+            </div>
+            <figcaption>Refined to .9999 purity and returned to the bullion market.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="page"><hr class="hairline" /></div>
+
+  <!-- III. RECYCLERS -->
+  <section id="process" aria-labelledby="process-title">
+    <div class="page">
+      <div class="section-head">
+        <span class="numeral">III</span>
+        <div>
+          <p class="eyebrow">How we work with recyclers</p>
+          <h2 id="process-title">Alongside the industry, not against it</h2>
+        </div>
+      </div>
+      <div class="prose-col reveal">
+        <p>Argentex is built to work alongside the existing recycling industry, not against it. Licensed recyclers already do the heavy work of collection and primary separation. We add the step the local market is missing: commercial silver recovery.</p>
+        <p>Material flows to us, value flows back, and a waste stream that used to carry a disposal cost becomes a source of revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page"><hr class="hairline" /></div>
+
+  <!-- IV. RESPONSIBILITY -->
+  <section id="responsibility" aria-labelledby="resp-title">
+    <div class="page">
+      <div class="split">
+        <div class="split-text">
+          <div class="section-head">
+            <span class="numeral">IV</span>
+            <div>
+              <p class="eyebrow">Responsibility</p>
+              <h2 id="resp-title">Value and material kept at home</h2>
+            </div>
+          </div>
+          <div class="prose-col reveal">
+            <p>Recovering silver domestically keeps both the material and its value inside South Africa, and it keeps end-of-life panel waste out of landfill and out of export containers.</p>
+            <p>We operate to the environmental and licensing standards the work demands, with traceability from the input material through to the refined metal.</p>
+          </div>
+        </div>
+        <div class="split-media reveal">
+          <figure>
+            <div class="media">
+              <img
+                src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1100&q=80"
+                alt="Solar array set against open South African landscape."
+                loading="lazy" width="1100" height="1375" />
+            </div>
+            <figcaption>Traceability from the input material through to the refined metal.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVERSED POSITIONING BLOCK -->
+  <section class="reversed reveal" aria-label="Positioning">
+    <div class="page">
+      <img class="reversed-mark" src="assets/logo-ag-mark-reversed.svg" alt="" width="56" height="56" />
+      <p class="eyebrow">Argentex</p>
+      <p class="lede">The first commercial silver recovery operation built for South Africa, by people who know its solar and refining industries.</p>
+    </div>
+  </section>
+
+  <!-- V. COMPANY -->
+  <section id="company" aria-labelledby="company-title">
+    <div class="page">
+      <div class="section-head">
+        <span class="numeral">V</span>
+        <div>
+          <p class="eyebrow">Company</p>
+          <h2 id="company-title">The team</h2>
+        </div>
+      </div>
+      <div class="prose-col reveal">
+        <p>Argentex brings together commercial, operational and technical experience drawn from the South African solar and refining industries.</p>
+      </div>
+      <ul class="team reveal">
+        <li>
+          <span class="name">Angus Henderson</span>
+          <span class="role">Co-Founder</span>
+          <span class="desc">Strategy and commercial.</span>
+        </li>
+        <li>
+          <span class="name">Beyers Visagie</span>
+          <span class="role">Managing Director</span>
+          <span class="desc">Operations, supplier development and plant management.</span>
+        </li>
+        <li>
+          <span class="name">Andrew Martin</span>
+          <span class="role">Co-Founder</span>
+          <span class="desc">Technical and refining.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page"><hr class="hairline" /></div>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="page">
+      <div class="section-head">
+        <span class="numeral">VI</span>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Get in touch</h2>
+        </div>
+      </div>
+      <div class="contact-grid reveal">
+        <div>
+          <p class="contact-line">
+            <span class="label">Registered office</span>
+            Argentex (Pty) Ltd<br />
+            39A First Avenue East,<br />
+            Parktown North, Johannesburg, 2193
+          </p>
+        </div>
+        <div>
+          <p class="contact-line">
+            <span class="label">Email</span>
+            <a class="ink-link" href="mailto:TODO@argentex.example">TODO confirm address</a>
+            <span class="todo">TODO</span>
+          </p>
+          <p class="contact-line">
+            <span class="label">Telephone</span>
+            TODO confirm number <span class="todo">TODO</span>
+          </p>
+          <p style="margin-top:1.5rem;"><a class="cta" href="mailto:TODO@argentex.example">Email Argentex</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="page">
+    <div class="footer-inner">
+      <span class="footer-brand">
+        <img class="brand-mark" src="assets/logo-ag-mark-compact.svg" alt="" width="28" height="28" />
+        <span class="footer-wordmark">Argentex</span>
+      </span>
+      <span>Argentex (Pty) Ltd &middot; 39A First Avenue East, Parktown North, Johannesburg 2193 &middot; &copy; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Subtle, accessible scroll reveal.
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
