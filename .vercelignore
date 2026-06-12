@@ -1,0 +1,7 @@
+# Keep the live site to the company profile only.
+# Reference pages and internal docs are not published.
+_private/
+*.md
+logo.html
+visuals-demo.html
+.claude/
