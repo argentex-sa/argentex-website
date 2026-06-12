@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Argentex. Silver recovery for South Africa's end-of-life solar panels</title>
-<meta name="description" content="Argentex is South Africa's first specialist silver recovery operation for end-of-life solar panels. We recover precious metals from solar panel back-sheets and silver-bearing e-waste, refine the silver to investment-grade purity, and return it to the South African economy as bullion." />
+<title>Argentex. Precious metal recovery from end-of-life solar and e-waste</title>
+<meta name="description" content="Argentex recovers precious metals from end-of-life solar panels and metal-bearing e-waste, refines them to investment grade, and returns the recovered value to the regional economy. Solar is the starting point." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F8F6F1'/%3E%3Crect x='6' y='6' width='88' height='88' fill='none' stroke='%231C1B19' stroke-width='3'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Georgia,serif' font-size='50' font-weight='700' fill='%231C1B19'%3EAg%3C/text%3E%3Crect x='34' y='78' width='32' height='3' fill='%236E2329'/%3E%3C/svg%3E" />
 
 <style>
@@ -328,13 +328,14 @@
   @keyframes m-spin { to { transform: rotate(360deg); } }
   @keyframes m-breathe { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
 
-  /* Refined bullion (motif 03) */
-  .m-ingot-body { fill: #C9C7C1; stroke: #A8A59E; stroke-width: 1; }
-  .m-ingot-top  { fill: #E9E7E1; stroke: #A8A59E; stroke-width: 1; }
-  .m-ingot-side { fill: #A8A59E; }
-  .m-sheen { animation: m-sweep 5.5s ease-in-out infinite; }
-  @keyframes m-sweep { 0% { transform: translateX(-260px); } 55%,100% { transform: translateX(260px); } }
-  .m-stamp { font-family: var(--sans); font-size: 10px; letter-spacing: 0.12em; fill: #1C1B19; opacity: 0.5; }
+  /* Refined metals (motif 03): silver, gold, copper */
+  .m-bar-face, .m-bar-top { stroke-width: 1; }
+  .m-bar-face.ag { fill: #C9C7C1; stroke: #A8A59E; } .m-bar-top.ag { fill: #E9E7E1; stroke: #A8A59E; } .m-bar-side.ag { fill: #A8A59E; }
+  .m-bar-face.au { fill: #CBA12E; stroke: #9C7A18; } .m-bar-top.au { fill: #E8C766; stroke: #9C7A18; } .m-bar-side.au { fill: #9C7A18; }
+  .m-bar-face.cu { fill: #B87333; stroke: #8A4F22; } .m-bar-top.cu { fill: #D98C5F; stroke: #8A4F22; } .m-bar-side.cu { fill: #8A4F22; }
+  .m-sheen { animation: m-sweep 6s ease-in-out infinite; }
+  @keyframes m-sweep { 0% { transform: translateX(0); } 55%,100% { transform: translateX(440px); } }
+  .m-stamp { font-family: var(--sans); font-size: 9px; letter-spacing: 0.1em; fill: #1C1B19; opacity: 0.55; }
 
   /* Solar field (motif 04) */
   .m-horizon { stroke: var(--ink); stroke-width: 1.25; }
@@ -389,8 +390,8 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="page">
       <p class="eyebrow">Argentex (Pty) Ltd</p>
-      <h1 id="hero-title">Silver recovery for South Africa's end-of-life solar panels.</h1>
-      <p class="sub prose-col">We recover precious metals from solar panel back-sheets and silver-bearing e-waste, refine the silver to investment-grade purity, and return it to the South African economy as bullion.</p>
+      <h1 id="hero-title">Precious metal recovery, starting with end-of-life solar.</h1>
+      <p class="sub prose-col">We recover precious metals from solar panel back-sheets and other metal-bearing e-waste, refine them to investment grade, and return the recovered value to the regional economy as bullion.</p>
       <p style="margin-top:2rem;"><a class="cta" href="#contact">Get in touch</a></p>
 
       <figure class="hero-figure reveal">
@@ -434,12 +435,12 @@
             <span class="numeral">I</span>
             <div>
               <p class="eyebrow">The opportunity</p>
-              <h2 id="opportunity-title">A value stream leaving the country</h2>
+              <h2 id="opportunity-title">A value stream that leaves the region</h2>
             </div>
           </div>
           <div class="prose-col reveal">
-            <p>South Africa installed an estimated 11 gigawatts of solar capacity through the energy-supply crisis of recent years. Those panels carry a finite life. As they reach the end of it, the glass, the aluminium frames and the junction boxes are already recovered by the country's licensed recyclers.</p>
-            <p>The back-sheet, which holds the silver, is not. Today it is stockpiled, sent to landfill, or exported for processing abroad. The material, and its value, leaves the country. Argentex exists to close that gap at home.</p>
+            <p>Solar is where this begins. South Africa installed an estimated 11 gigawatts of capacity through the energy-supply crisis of recent years, and solar build-out continues across the region. Those panels carry a finite life. As they reach the end of it, the glass, the aluminium frames and the junction boxes are already recovered by licensed recyclers.</p>
+            <p>The back-sheet, which holds the precious metal, is not. The same gap runs through other electronic waste streams that still carry recoverable metal. Today this material is stockpiled, sent to landfill, or exported for processing abroad, and its value leaves with it. Argentex exists to close that gap.</p>
           </div>
         </div>
         <div class="split-media reveal">
@@ -454,7 +455,7 @@
                 <line x1="40" y1="230" x2="360" y2="230" stroke="#1C1B19" stroke-width="1.25"/>
               </svg>
             </div>
-            <figcaption>The silver sits in the back-sheet, the one layer the local market does not yet recover.</figcaption>
+            <figcaption>The precious metal sits in the back-sheet, the layer the market does not yet recover.</figcaption>
           </figure>
         </div>
       </div>
@@ -476,29 +477,42 @@
             </div>
           </div>
           <div class="prose-col reveal">
-            <p>We take back-sheet material and silver-bearing e-waste from licensed recyclers and recover the silver through a controlled refining process. The recovered metal is refined to .9999 purity and sold into the bullion market.</p>
+            <p>We take back-sheet material and metal-bearing e-waste from licensed recyclers and recover the precious metals through a controlled refining process. Each metal is refined to investment grade and sold into the bullion and commodity markets.</p>
             <p>We carry the processing, the equipment and the operational risk, so our supply partners turn a stockpiled waste stream into recurring value without carrying any of the cost.</p>
           </div>
         </div>
         <div class="split-media reveal">
           <figure>
             <div class="motif ink">
-              <svg viewBox="0 30 400 180" role="img" aria-label="A cast silver bar stamped Ag .9999 with a slow light sweep.">
+              <svg viewBox="0 30 400 180" role="img" aria-label="Three cast bars of silver, gold and copper with a slow light sweep.">
                 <defs>
-                  <clipPath id="argentexIngotClip">
-                    <path d="M120 150 L150 120 L300 120 L280 150 Z M120 150 L280 150 L280 185 L120 185 Z"/>
+                  <clipPath id="argentexBarsClip">
+                    <rect x="95" y="150" width="70" height="26"/>
+                    <rect x="175" y="150" width="70" height="26"/>
+                    <rect x="255" y="150" width="70" height="26"/>
                   </clipPath>
                 </defs>
-                <polygon class="m-ingot-top" points="120,150 150,120 300,120 280,150"/>
-                <polygon class="m-ingot-side" points="280,150 300,120 300,150 280,185"/>
-                <rect class="m-ingot-body" x="120" y="150" width="160" height="35"/>
-                <g clip-path="url(#argentexIngotClip)">
-                  <rect class="m-sheen" x="-40" y="110" width="34" height="90" fill="#FFFFFF" opacity="0.55" transform="skewX(-20)"/>
+                <!-- Silver -->
+                <polygon class="m-bar-top ag" points="95,150 115,138 185,138 165,150"/>
+                <polygon class="m-bar-side ag" points="165,150 185,138 185,164 165,176"/>
+                <rect class="m-bar-face ag" x="95" y="150" width="70" height="26"/>
+                <text class="m-stamp" x="120" y="168">Ag</text>
+                <!-- Gold -->
+                <polygon class="m-bar-top au" points="175,150 195,138 265,138 245,150"/>
+                <polygon class="m-bar-side au" points="245,150 265,138 265,164 245,176"/>
+                <rect class="m-bar-face au" x="175" y="150" width="70" height="26"/>
+                <text class="m-stamp" x="200" y="168">Au</text>
+                <!-- Copper -->
+                <polygon class="m-bar-top cu" points="255,150 275,138 345,138 325,150"/>
+                <polygon class="m-bar-side cu" points="325,150 345,138 345,164 325,176"/>
+                <rect class="m-bar-face cu" x="255" y="150" width="70" height="26"/>
+                <text class="m-stamp" x="280" y="168">Cu</text>
+                <g clip-path="url(#argentexBarsClip)">
+                  <rect class="m-sheen" x="-40" y="135" width="28" height="60" fill="#FFFFFF" opacity="0.5" transform="skewX(-20)"/>
                 </g>
-                <text class="m-stamp" x="150" y="172">Ag .9999</text>
               </svg>
             </div>
-            <figcaption>Refined to .9999 purity and returned to the bullion market.</figcaption>
+            <figcaption>Silver, gold and copper, recovered and refined to investment grade.</figcaption>
           </figure>
         </div>
       </div>
@@ -518,7 +532,7 @@
         </div>
       </div>
       <div class="prose-col reveal">
-        <p>Argentex is built to work alongside the existing recycling industry, not against it. Licensed recyclers already do the heavy work of collection and primary separation. We add the step the local market is missing: commercial silver recovery.</p>
+        <p>Argentex is built to work alongside the existing recycling industry, not against it. Licensed recyclers already do the heavy work of collection and primary separation. We add the step the market is missing: commercial precious metal recovery.</p>
         <p>Material flows to us, value flows back, and a waste stream that used to carry a disposal cost becomes a source of revenue.</p>
       </div>
     </div>
@@ -535,11 +549,11 @@
             <span class="numeral">IV</span>
             <div>
               <p class="eyebrow">Responsibility</p>
-              <h2 id="resp-title">Value and material kept at home</h2>
+              <h2 id="resp-title">Value retained in the material</h2>
             </div>
           </div>
           <div class="prose-col reveal">
-            <p>Recovering silver domestically keeps both the material and its value inside South Africa, and it keeps end-of-life panel waste out of landfill and out of export containers.</p>
+            <p>Recovering precious metals close to source retains the value held in the material rather than exporting it for others to capture, and it keeps end-of-life panels and e-waste out of landfill and out of export containers.</p>
             <p>We operate to the environmental and licensing standards the work demands, with traceability from the input material through to the refined metal.</p>
           </div>
         </div>
@@ -552,7 +566,7 @@
     <div class="page">
       <img class="reversed-mark" src="assets/logo-ag-mark-reversed.svg" alt="" width="56" height="56" />
       <p class="eyebrow">Argentex</p>
-      <p class="lede">The first commercial silver recovery operation built for South Africa, by people who know its solar and refining industries.</p>
+      <p class="lede">Commercial precious metal recovery for the region, built by people who know its solar, e-waste and refining industries.</p>
     </div>
   </section>
 
@@ -567,7 +581,7 @@
         </div>
       </div>
       <div class="prose-col reveal">
-        <p>Argentex brings together commercial, operational and technical experience drawn from the South African solar and refining industries.</p>
+        <p>Argentex brings together commercial, operational and technical experience drawn from the region's solar, e-waste and refining industries.</p>
       </div>
       <ul class="team reveal">
         <li>
